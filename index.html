@@ -3,13 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Pop-out feedback form</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&Roboto:bold" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
   <div class="feedback feedback--collapsed">
-    <div class="feedback-heading" onclick="handleClick(this)">
+    <div class="feedback-heading" onclick="handleClick()">
       Feedback
+    </div>
+    <div class="feedback-body">
+      <form class="feedback-form">
+      <label>Full name</label>
+      <input name="name" type="text" placeholder="Full name" />
+      <label>Email</label>
+        <input name="email" type="email" placeholder="Email" />
+      <label>Feedback</label>
+        <textarea></textarea>
+        <button>Send feedback</button>
+      </form>
     </div>
   </div>
   <script src="feedback.js"></script>

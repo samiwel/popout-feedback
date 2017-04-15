@@ -7,18 +7,6 @@
   font-size: .9em;
 }
 
-.feedback--collapsed .feedback-heading {
-  background: #673ab7;
-  width: 150px;
-  transition: width .5s ease-in-out, background .3s ease-in-out;
-}
-
-.feedback--collapsed .feedback-heading:hover {
-  background: #e91e63;
-  width: 150px;
-  transition: width .5s ease-in-out, background .3s ease-in-out;
-}
-
 .feedback-heading {
   background: #d32f2f;
   color: white;
@@ -28,5 +16,82 @@
   padding: .8em;
   text-align: center;
   cursor: pointer;
-  transition: width .5s ease-in-out, background .3s ease-in-out;
+  transition: background .3s ease-in-out, width .5s ease-in-out;
+}
+
+.feedback--collapsed .feedback-heading {
+  background: #673ab7;
+  width: 150px;
+  transition: background .3s ease-in-out, width .5s ease-in-out;
+}
+
+.feedback--collapsed .feedback-heading:hover {
+  background: #e91e63;
+  transition: background .3s ease-in-out, width .5s ease-in-out;
+}
+
+.feedback-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 300px;
+  max-width: 300px;
+  height: 400px;
+  max-height: 400px;
+  overflow: visible;
+  transition: height .5s ease-in-out, width .5s ease-in-out;
+  background: #db5757;
+  padding: .8em;
+}
+
+.feedback--collapsed .feedback-body {
+  height: 0px;
+  width: 150px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: height .5s ease-in-out, width: .5s ease-in-out;
+  padding: 0;
+}
+
+.feedback-body label,
+.feedback-body input,
+.feedback-body textarea,
+.feedback-body button {
+  flex: 1 1 100%;
+  padding: .4em 0;
+  width: 100%;
+}
+
+.feedback-form:first-child {
+  margin-top: 1em !important;
+}
+
+.feedback-body input,
+.feedback-body textarea {
+  margin-bottom: 1em;
+}
+
+.feedback-body textarea {
+  height: 12em;
+}
+
+.feedback-form label {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8em;
+}
+
+.feedback-form label::after {
+  content: ":";
+}
+
+.feedback-form button {
+  background: #bd2828;
+  box-shadow: none;
+  border: none;
+  color: white;
+  padding: .8em;
+  text-transform: uppercase;
 }
